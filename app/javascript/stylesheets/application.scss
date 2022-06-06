@@ -1,0 +1,493 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "react-toastify/dist/ReactToastify.min.css";
+@import "toastr/toastr";
+@import "team";
+@import "time-tracking";
+@import "react-calendar";
+
+@layer base {
+  @font-face {
+    font-family: "Manrope";
+    src: url("../fonts/Manrope/Manrope-VariableFont_wght.ttf");
+    font-weight: 200 800;
+  }
+
+  .field_with_errors {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .modal-width {
+    min-width: 25rem;
+  }
+}
+
+@layer components {
+  @import "navbar";
+  .sidebar {
+    &__container {
+      top: 67px;
+      box-shadow: -2px 6px 11px grey;
+      @apply fixed right-0 bottom-0 w-80 bg-white;
+    }
+    &__footer {
+      @apply p-6 flex h-full items-end justify-center;
+    }
+    &__reset {
+      @apply mr-2 tracking-widest items-center w-6/12 py-1 px-4 border-2 border-miru-han-purple-1000 shadow-sm bg-transparent focus:outline-none rounded text-base font-medium text-miru-han-purple-1000 text-base bg-transparent hover:text-miru-han-purple-600;
+    }
+    &__apply {
+      @apply tracking-widest items-center w-6/12 py-1 px-4 border-2 border-miru-han-purple-1000 shadow-sm bg-transparent hover:border-miru-han-purple-600 focus:outline-none rounded text-base font-medium text-white text-base bg-miru-han-purple-1000;
+    }
+  }
+
+  .button-icon{
+    &__back {
+      @apply mr-4 h-8 p-1;
+    }
+    &__back:hover {
+      background-color: rgba(205, 214, 223, 0.2);
+      @apply rounded;
+    }
+  }
+
+  .menuButton {
+    &__button {
+      @apply rounded p-2;
+    }
+    &__button:hover {
+      background-color: rgba(205, 214, 223, 0.2);
+      @apply rounded;
+    }
+    &__wrapper {
+      box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+      @apply absolute bg-white right-0 py-5 w-64 rounded-xl;
+    }
+    &__list-item {
+      @apply text-sm block hover:bg-miru-gray-100 w-full px-5 py-1.5 text-miru-han-purple-1000 items-center flex;
+    }
+  }
+
+  .header {
+    &__title {
+      @apply text-3xl font-extrabold leading-7 text-gray-900;
+    }
+    &__searchWrap {
+      @apply flex items-center
+    }
+    &__searchInnerWrapper {
+      @apply mt-1 relative rounded-md shadow-sm md:ml-5;
+      input {
+        @apply bg-miru-gray-100 text-tiny font-medium;
+        width: 424px;
+        padding: 7px 6px;
+      }
+    }
+    &__searchInput {
+      @apply w-24 sm:w-40 md:w-64 lg:w-96 rounded tracking-wider appearance-none border border-gray-100 block  px-3 py-2 bg-miru-gray-100 h-8 shadow-sm font-semibold text-xs text-miru-dark-purple-1000 focus:outline-none focus:ring-miru-gray-1000 focus:border-miru-gray-1000 sm:text-sm
+    }
+    &__button {
+      @apply ml-2 tracking-widest inline-flex items-center h-10 flex justify-center py-1 px-4 border-2 border-miru-han-purple-1000 shadow-sm bg-transparent hover:border-miru-han-purple-600 focus:outline-none rounded text-base font-sans font-medium text-miru-han-purple-1000 bg-transparent hover:text-miru-han-purple-600 cursor-pointer
+    }
+  }
+
+  .page-display {
+    &__wrap {
+      @apply pt-5 w-full flex items-stretch flex-col sm:flex-row text-miru-dark-purple-1000 border-t border-miru-gray-1000;
+    }
+    &__box {
+      @apply flex flex-col justify-start mr-12 w-full border-r-0 sm:border-r sm:border-miru-gray-1000;
+    }
+    &__box:last-child {
+      @apply border-r-0;
+    }
+  }
+
+  .align-page {
+    &__outer-wrapper {
+      @apply lg:max-w-3xl xl:max-w-7xl mx-auto font-manrope;
+    }
+    &__middle-wrapper {
+      @apply px-3 sm:px-6 md:px-10 lg:px-0 xl:px-22;
+    }
+    &__inner-wrapper {
+      @apply xl:px-2;
+    }
+  }
+
+  .form {
+    &__textarea, &__select {
+      @apply rounded tracking-wider border block w-full px-3 py-2 bg-miru-gray-100 font-medium text-sm text-miru-dark-purple-1000 focus:outline-none;
+    }
+    &__input_submit {
+      @apply tracking-widest h-10 w-full flex justify-center py-1 px-4 border border-transparent shadow-sm text-base font-sans font-medium text-miru-white-1000 bg-miru-han-purple-1000 hover:bg-miru-han-purple-600 focus:outline-none rounded cursor-pointer;
+    }
+    &__input {
+      @apply rounded tracking-wider border block w-full px-3 py-2 bg-miru-gray-100 font-medium text-sm text-miru-dark-purple-1000 focus:outline-none h-8;
+    }
+    &__label {
+      @apply tracking-wider block text-xs font-normal text-miru-dark-purple-1000;
+    }
+    &__title {
+      @apply text-base font-extrabold tracking-normal text-miru-dark-purple-1000;
+    }
+    &__button {
+      @apply tracking-widest inline-flex items-center h-10 w-full flex justify-center py-1 px-4 border border-transparent shadow-sm text-base font-bold text-miru-white-1000 bg-miru-han-purple-1000 hover:bg-miru-han-purple-600 focus:outline-none rounded cursor-pointer;
+    }
+    &__button_outline {
+      @apply ml-2 tracking-widest inline-flex items-center h-10 w-full flex justify-center py-1 px-4 border-2 border-miru-han-purple-1000 shadow-sm bg-transparent hover:border-miru-han-purple-600 focus:outline-none rounded text-base font-semibold text-miru-han-purple-1000 bg-transparent hover:text-miru-han-purple-600 cursor-pointer;
+    }
+    &__error {
+      @apply tracking-wider block text-xs font-semibold text-red-600;
+    }
+    &__link {
+      @apply font-bold text-miru-han-purple-1000 hover:text-miru-han-purple-600 tracking-wider;
+    }
+    &__save {
+      @apply text-base font-semibold text-miru-white-1000 ml-2 tracking-widest inline-flex items-center h-10 w-full flex justify-center py-1 px-4 border border-transparent shadow-sm bg-miru-han-purple-1000 hover:bg-miru-han-purple-600 focus:outline-none rounded cursor-pointer;
+    }
+    &__cancel {
+      @apply text-base font-semibold text-miru-han-purple-1000 ml-2 tracking-widest inline-flex items-center h-10 w-full flex justify-center py-1 px-4 border-2 border-miru-han-purple-1000 shadow-sm bg-transparent hover:border-miru-han-purple-600 focus:outline-none rounded cursor-pointer;
+    }
+    &__radio {
+      @apply focus:ring-miru-han-purple-1000 h-4 w-4 border-miru-han-purple-1000 text-miru-dark-purple-1000;
+    }
+  }
+
+  .button {
+    @apply tracking-widest h-10 w-48 text-base font-bold focus:outline-none rounded;
+    &__bg_transparent {
+      @apply button border border-miru-han-purple-1000 bg-transparent text-miru-han-purple-1000 hover:text-miru-han-purple-600;
+    }
+    &__bg_purple {
+      @apply button text-miru-white-1000 bg-miru-han-purple-1000 hover:bg-miru-han-purple-600;
+    }
+  }
+
+  .password_eye {
+    &__icon {
+      @apply h-4 w-4 text-miru-han-purple-1000 cursor-pointer;
+    }
+    &__position {
+      @apply absolute inset-y-0 right-0 pr-3 flex items-center text-sm leading-5
+    }
+  }
+
+  .page-content {
+    &__position {
+      @apply sm:flex sm:items-center sm:justify-between px-1 sm:px-0 mt-6;
+    }
+    &__title-width {
+      @apply w-full sm:w-1/5;
+    }
+    &__title {
+      @apply text-3xl font-bold leading-7 text-gray-900 sm:text-4xl py-1;
+    }
+    &__search-width {
+      @apply w-full sm:w-3/5 mt-6 sm:mt-0;
+    }
+    &__search {
+      @apply sm:pr-6 md:pr-10 lg:pr-6 xl:pr-48 xxl:pr-56;
+    }
+    &__search-input {
+      @apply block w-full pr-10 border border-gray-100 rounded px-3 py-2 bg-miru-gray-100 h-8 shadow-sm font-semibold text-xs text-miru-dark-purple-1000 focus:outline-none focus:ring-miru-gray-1000 focus:border-miru-gray-1000 sm:text-sm;
+    }
+    &__search-image {
+      @apply h-4 absolute inset-y-0 right-0 pr-3 my-2 flex items-center cursor-pointer;
+    }
+    &__new-user-width {
+      @apply w-full sm:w-1/4 mt-6 sm:mt-0;
+    }
+    &__new-user-position {
+      @apply md:ml-3 lg:ml-5 xl:ml-22;
+    }
+    &__new-user-button {
+      @apply sm:ml-2 tracking-widest inline-flex items-center h-10 w-full flex justify-center py-1 md:px-4 border-2 border-miru-han-purple-1000 shadow-sm bg-transparent hover:border-miru-han-purple-600 focus:outline-none rounded text-base font-semibold text-miru-han-purple-1000 bg-transparent hover:text-miru-han-purple-600 cursor-pointer;
+    }
+    &__button-image {
+      @apply -ml-0.5 mr-2 h-4 w-4;
+    }
+  }
+
+  .table {
+    &__flex {
+      @apply flex flex-col;
+    }
+    &__position-one {
+      @apply -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8;
+    }
+    &__position-two {
+      @apply py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8;
+    }
+    &__border {
+      @apply overflow-hidden border-b-2 border-miru-gray-200
+    }
+    &__width {
+      @apply min-w-full divide-y divide-gray-200 mt-4;
+    }
+    &__header {
+      @apply p-5 text-left font-normal text-xs text-miru-dark-purple-600 tracking-widest;
+    }
+    &__cell {
+      @apply p-5 text-left text-xs font-normal text-miru-dark-purple-1000 tracking-normal;
+    }
+    &__body {
+      @apply bg-white divide-y divide-gray-200;
+    }
+    &__data {
+      @apply px-3 py-3 whitespace-nowrap;
+    }
+    &__button {
+      @apply h-6 rounded hover:bg-opacity-20 hover:bg-miru-gray-1000;
+    }
+    &__button-design {
+      @apply text-right text-sm font-medium;
+    }
+    &__pending {
+      @apply px-2 inline-flex text-xs leading-5 tracking-widest font-semibold rounded-full bg-miru-han-purple-100 text-miru-han-purple-1000;
+    }
+    &__text {
+      @apply text-xs font-normal text-miru-dark-purple-1000;
+    }
+    &__name {
+      @apply text-base font-normal text-miru-dark-purple-1000;
+    }
+    &__avatar {
+      @apply h-6 w-6 rounded-full;
+    }
+  }
+
+  .modal {
+    &__modal {
+      @apply px-5 fixed w-full inset-0 z-50 overflow-hidden flex justify-center items-center animated fadeIn faster;
+    }
+    &__container {
+      @apply shadow-lg bg-white w-full max-w-md mx-auto rounded-xl z-50 overflow-y-auto;
+    }
+    &__content {
+      @apply py-4 text-left px-3;
+    }
+    &__position {
+      @apply flex justify-between items-center mx-3;
+    }
+    &__title {
+      @apply text-base font-extrabold;
+    }
+    &__close {
+      @apply cursor-pointer z-50;
+    }
+    &__button {
+      @apply p-2 rounded hover:bg-opacity-20 hover:bg-miru-gray-1000;
+    }
+    &__form {
+      @apply mb-3 mx-3 flex justify-center;
+    }
+  }
+}
+
+.custom {
+  &__checkbox:checked + div {
+    @apply border-miru-han-purple-1000;
+  }
+  &__checkbox:checked + div .custom__checkbox-tick {
+    @apply block;
+  }
+  &__checkbox:indeterminate + div .custom__checkbox-dash {
+    @apply block;
+  }
+  &__radio:checked + label i {
+    @apply bg-miru-han-purple-1000 h-3 w-3;
+    box-shadow: 0px 0px 0px 2px white inset;
+  }
+  &__radio-text {
+    @apply w-3 h-3 inline-block mr-2 rounded-full border border-miru-han-purple-1000;
+  }
+}
+
+.filter {
+  &__subheading {
+    @apply flex justify-between items-center w-full px-5;
+  }
+  &__subheading-text {
+    @apply text-xs text-miru-dark-purple-1000 tracking-widest;
+  }
+}
+
+.react-select-filter {
+  &___control {
+    height: 32px;
+  }
+  &__placeholder {
+    font-size: 12px;
+  }
+  &__dropdown-indicator {
+    padding: 4px !important;
+  }
+  &__multi-value  {
+    font-size: 12px;
+    background-color: #E1E6EC;
+    border-radius: 14px !important;
+    padding: 0px 8px;
+    align-items: center;
+    justify-content: center;
+  }
+  &__option {
+    font-size: 12px;
+  }
+  &__value-container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+.filter {
+  &__counter {
+    @apply absolute right-0 block rounded-lg text-white bg-miru-han-purple-600;
+    top: 4px;
+    padding: 7px 5px;
+  }
+}
+
+body {
+  font-family: "Manrope", "sans-serif";
+}
+
+.example-enter {
+  opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  transition: opacity 2000ms ease-in;
+}
+
+.example-leave {
+  opacity: 1;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  transition: opacity 3000ms ease-in;
+}
+
+.hoverIcon:hover {
+  background-color: #F5F7F9;
+  .iconWrapper {
+    @apply visible;
+  }
+}
+
+.box-shadow {
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+}
+
+.hoverPencil:hover button {
+  @apply visible
+}
+
+
+
+.hoverPencil .react-datepicker-wrapper {
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.customToggle {
+  &__container{
+	  -webkit-transform: translate3d( -50%, -50%, 0 );
+	  transform: translate3d( -50%, -50%, 0 );
+  }
+
+  & {
+     position: absolute;
+      opacity: 0;
+  }
+
+  & + div {
+    vertical-align: middle;
+    width: 40px;
+    height: 20px;
+    border-radius: 999px;
+    background-color: #E1E6EC;
+    -webkit-transition-duration: .4s;
+    transition-duration: .4s;
+    -webkit-transition-property: background-color, box-shadow;
+    transition-property: background-color, box-shadow;
+    cursor: pointer;
+  }
+
+  &:checked + div {
+    width: 48px;
+    background-position: 0 0;
+    background-color: #E1E6EC;
+  }
+
+  & + div {
+    width: 48px;
+    height: 24px;
+  }
+
+  &:checked + div {
+    background-color: #5B34EA;
+  }
+
+  & + div > div {
+    float: left;
+    width: 16px; height: 16px;
+    border-radius: inherit;
+    background: #ffffff;
+    -webkit-transition-timing-function: cubic-bezier(1,0,0,1);
+    transition-timing-function: cubic-bezier(1,0,0,1);
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-property: transform, background-color;
+    transition-property: transform, background-color;
+    pointer-events: none;
+    margin-top: 4px;
+    margin-left: 3px;
+  }
+
+  &:checked + div > div {
+    -webkit-transform: translate3d(20px, 0, 0);
+    transform: translate3d(20px, 0, 0);
+    background-color: #ffffff;
+  }
+
+  &:checked + div > div {
+    -webkit-transform: translate3d(25px, 0, 0);
+    transform: translate3d(25px, 0, 0);
+  }
+}
+
+:root {
+  --toastify-color-light: #fff;
+  --toastify-color-dark: #121212;
+  --toastify-color-info: #A9DEEF;
+  --toastify-color-success: #A9EFC5;
+  --toastify-color-warning: #EFDBA9;
+  --toastify-color-error: #EFA9A9;
+
+  //Used only for colored theme
+  --toastify-text-color-info: #104556;
+  --toastify-text-color-success: #10562C;
+  --toastify-text-color-warning: #564210;
+  --toastify-text-color-error: #561010;
+}
+
+.Toastify__toast {
+  padding: 1rem;
+
+  .Toastify__toast-body {
+    border-radius: 8px;
+    font-family: Manrope;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0px;
+  }
+}

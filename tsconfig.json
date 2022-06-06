@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["es6", "dom"],
+    "module": "es6",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "target": "es5",
+    "jsx": "react",
+    "noEmit": true,
+    "baseUrl": "./",
+    "paths": {
+      "components/*": ["app/javascript/src/components/*"],
+      "apis/*": ["./app/javascript/src/apis/*"],
+      "helpers/*": ["./app/javascript/src/helpers/*"],
+      "common/*": ["./app/javascript/src/common/*"],
+      "utils/*": ["./app/javascript/src/utils/*"],
+    }
+  },
+  "exclude": [
+    "**/*.spec.ts",
+    "node_modules",
+    "vendor",
+    "public"
+  ],
+  "compileOnSave": false
+}

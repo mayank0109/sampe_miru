@@ -1,0 +1,47 @@
+{
+  "application.js": "/packs-test/js/application-cee97f781115847f6aa8.js",
+  "application.js.map": "/packs-test/js/application-cee97f781115847f6aa8.js.map",
+  "companies.js": "/packs-test/js/companies-a1b28a2ebf2a606150fc.js",
+  "companies.js.map": "/packs-test/js/companies-a1b28a2ebf2a606150fc.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs-test/js/application-cee97f781115847f6aa8.js"
+      ],
+      "js.map": [
+        "/packs-test/js/application-cee97f781115847f6aa8.js.map"
+      ]
+    },
+    "companies": {
+      "js": [
+        "/packs-test/js/companies-a1b28a2ebf2a606150fc.js"
+      ],
+      "js.map": [
+        "/packs-test/js/companies-a1b28a2ebf2a606150fc.js.map"
+      ]
+    },
+    "hello_typescript": {
+      "js": [
+        "/packs-test/js/hello_typescript-e803cb28031b43215ee3.js"
+      ],
+      "js.map": [
+        "/packs-test/js/hello_typescript-e803cb28031b43215ee3.js.map"
+      ]
+    },
+    "server_rendering": {
+      "js": [
+        "/packs-test/js/server_rendering-3c23f8d3d5086c8228d4.js"
+      ],
+      "js.map": [
+        "/packs-test/js/server_rendering-3c23f8d3d5086c8228d4.js.map"
+      ]
+    }
+  },
+  "hello_typescript.js": "/packs-test/js/hello_typescript-e803cb28031b43215ee3.js",
+  "hello_typescript.js.map": "/packs-test/js/hello_typescript-e803cb28031b43215ee3.js.map",
+  "media/files/plus-jakarta-sans-latin-400-normal.woff": "/packs-test/media/files/plus-jakarta-sans-latin-400-normal-43e0fcf9.woff",
+  "media/files/plus-jakarta-sans-latin-400-normal.woff2": "/packs-test/media/files/plus-jakarta-sans-latin-400-normal-2a7bb451.woff2",
+  "media/fonts/Manrope/Manrope-VariableFont_wght.ttf": "/packs-test/media/fonts/Manrope/Manrope-VariableFont_wght-95cc165789861324e0255466c3b6346a.ttf",
+  "server_rendering.js": "/packs-test/js/server_rendering-3c23f8d3d5086c8228d4.js",
+  "server_rendering.js.map": "/packs-test/js/server_rendering-3c23f8d3d5086c8228d4.js.map"
+}

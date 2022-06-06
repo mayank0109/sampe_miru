@@ -1,0 +1,69 @@
+{
+  "application.js": "/packs/js/application-ebc1f36d169a7d4eb907.js",
+  "application.js.map": "/packs/js/application-ebc1f36d169a7d4eb907.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-ebc1f36d169a7d4eb907.js"
+      ],
+      "js.map": [
+        "/packs/js/application-ebc1f36d169a7d4eb907.js.map"
+      ]
+    },
+    "server_rendering": {
+      "js": [
+        "/packs/js/server_rendering-053b7c9f653c00612114.js"
+      ],
+      "js.map": [
+        "/packs/js/server_rendering-053b7c9f653c00612114.js.map"
+      ]
+    },
+    "settings": {
+      "js": [
+        "/packs/js/settings-45d039683562ddcbd328.js"
+      ],
+      "js.map": [
+        "/packs/js/settings-45d039683562ddcbd328.js.map"
+      ]
+    },
+    "team/modal": {
+      "js": [
+        "/packs/js/team/modal-aea6217992299f6da71e.js"
+      ],
+      "js.map": [
+        "/packs/js/team/modal-aea6217992299f6da71e.js.map"
+      ]
+    }
+  },
+  "media/files/plus-jakarta-sans-latin-400-normal.woff": "/packs/media/files/plus-jakarta-sans-latin-400-normal-43e0fcf9.woff",
+  "media/files/plus-jakarta-sans-latin-400-normal.woff2": "/packs/media/files/plus-jakarta-sans-latin-400-normal-2a7bb451.woff2",
+  "media/fonts/Manrope/Manrope-VariableFont_wght.ttf": "/packs/media/fonts/Manrope/Manrope-VariableFont_wght-95cc165789861324e0255466c3b6346a.ttf",
+  "media/images/Connect.svg": "/packs/media/images/Connect-474c4e42.svg",
+  "media/images/ConnectPaypal.svg": "/packs/media/images/ConnectPaypal-7ee644a7.svg",
+  "media/images/PaypalLogo.svg": "/packs/media/images/PaypalLogo-b43d21fe.svg",
+  "media/images/alert-error-close.svg": "/packs/media/images/alert-error-close-7289b732.svg",
+  "media/images/amex.svg": "/packs/media/images/amex-22b8e0ae.svg",
+  "media/images/applePay.svg": "/packs/media/images/applePay-159af462.svg",
+  "media/images/avatar_payments.svg": "/packs/media/images/avatar_payments-637fdd4d.svg",
+  "media/images/checkbox-checked.svg": "/packs/media/images/checkbox-checked-dd80eb82.svg",
+  "media/images/checkbox-unchecked.svg": "/packs/media/images/checkbox-unchecked-cca793d8.svg",
+  "media/images/connected_check.svg": "/packs/media/images/connected_check-d275eedb.svg",
+  "media/images/error-octagon.svg": "/packs/media/images/error-octagon-7209a368.svg",
+  "media/images/info-circle.svg": "/packs/media/images/info-circle-c10112f3.svg",
+  "media/images/info-close-icon.svg": "/packs/media/images/info-close-icon-21b02455.svg",
+  "media/images/masterCard.svg": "/packs/media/images/masterCard-85f64533.svg",
+  "media/images/pConnectInvoice.svg": "/packs/media/images/pConnectInvoice-e652a4f8.svg",
+  "media/images/sConnectInvoice.svg": "/packs/media/images/sConnectInvoice-7c2a5d10.svg",
+  "media/images/stripe_logo.svg": "/packs/media/images/stripe_logo-61edd88c.svg",
+  "media/images/success-check-circle.svg": "/packs/media/images/success-check-circle-f81731ca.svg",
+  "media/images/success-close-icon.svg": "/packs/media/images/success-close-icon-95c57c4e.svg",
+  "media/images/visa.svg": "/packs/media/images/visa-8d83944d.svg",
+  "media/images/warning-close-icon.svg": "/packs/media/images/warning-close-icon-456f8675.svg",
+  "media/images/warning-triangle.svg": "/packs/media/images/warning-triangle-209cccf7.svg",
+  "server_rendering.js": "/packs/js/server_rendering-053b7c9f653c00612114.js",
+  "server_rendering.js.map": "/packs/js/server_rendering-053b7c9f653c00612114.js.map",
+  "settings.js": "/packs/js/settings-45d039683562ddcbd328.js",
+  "settings.js.map": "/packs/js/settings-45d039683562ddcbd328.js.map",
+  "team/modal.js": "/packs/js/team/modal-aea6217992299f6da71e.js",
+  "team/modal.js.map": "/packs/js/team/modal-aea6217992299f6da71e.js.map"
+}

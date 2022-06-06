@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Invoice: <%= @invoice.invoice_number %></h1>
+
+    <p>
+      Hi <%= @invoice.client_name %>, You have an invoice with amount <%= @invoice.amount %>.
+    </p>
+
+    <p>
+      The due date is <%= @invoice.due_date %>.
+    </p>
+
+    <p>You can pay for the invoice here: <%= link_to nil, new_invoice_payment_url(@invoice), target: "_blank", rel: "nofollow" %></p>
+
+    <p>Thanks!</p>
+  </body>
+</html>
